@@ -65,7 +65,8 @@ function generateStrongPassword($length = 27, $add_dashes = false, $available_se
 
 	$password = str_shuffle($password);
     	$end = $password."".$includes;
-
+	$end = str_shuffle($end);
+	
 	if(!$add_dashes)
 		return $end;
 
